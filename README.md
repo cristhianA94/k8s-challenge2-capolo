@@ -31,20 +31,33 @@ Para superar el desafio deberás entregar en un unico repositorio de github en f
 
 ### Paso 1
 
+    kubectl apply -f pod-demo.yaml
+    kubectl get pod -A
+
 ![Imagen 1.](imagen1.jpg)
 
 ### Paso 2
+
+    kubectl describe pod pod-challenge2
 
 ![Imagen 2.](imagen2.jpg)
 
 ### Paso 3
 
+    kubectl exec -it pod/pod-challenge2 -- sh
+    cd htcdocs/
+    ls
+
 ![Imagen 3.](imagen3.jpg)
 
 ### Paso 4
 
+    kubectl port-forward pod/pod-challenge2 8888:80
+
 ![Imagen 4.](imagen4.jpg)
 
 ### Paso 5
+
+    kubectl logs pod/pod-challenge2
 
 ![Imagen 1.](imagen5.jpg)
